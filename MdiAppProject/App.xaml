@@ -1,0 +1,14 @@
+﻿<Application x:Class="MdiAppProject.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MdiAppProject"
+             StartupUri="LoginWindow.xaml">
+    <Application.Resources>
+		<ControlTemplate x:Key="WindowTemplate" TargetType="Window">
+			<Grid>
+				<Image Source="/docSys.jpeg" Opacity="0.5" Stretch="Fill" />
+				<ContentPresenter />
+			</Grid>
+		</ControlTemplate>
+	</Application.Resources>
+</Application>
