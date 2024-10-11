@@ -22,7 +22,6 @@ namespace MdiAppProject
 		public SignUpWindow()
 		{
 			InitializeComponent();
-			DataContext = new MdtViewModel();
 		}
 
 		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

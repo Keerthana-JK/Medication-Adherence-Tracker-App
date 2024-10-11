@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,14 @@ namespace MdiAppProject
 		public MedicationWindow()
 		{
 			InitializeComponent();
+			LoadAllMedications();
+			grdMedications.ItemsSource = AllMedications;
+		}
+		public ObservableCollection<Medication> AllMedications { get; set; }
+		public void LoadAllMedications()
+		{
+			var context = new MdtEntities();
+			AllMedications = new ObservableCollection<Medication>(context.Medications.ToList());
 		}
 	}
 }

@@ -20,8 +20,8 @@
 		<TextBox x:Name="txtPassword" Height="26" Canvas.Left="375" TextWrapping="Wrap" Text="123" Canvas.Top="249" Width="215" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 		<TextBox x:Name="txtDateOfBirth" Height="26" Canvas.Left="375" TextWrapping="Wrap" Text="01-01-2024" Canvas.Top="301" Width="215" HorizontalAlignment="Left" VerticalAlignment="Center" />
 		<TextBox x:Name="txtMedicalHistory" Height="26" Canvas.Left="376" TextWrapping="Wrap" Text="diabetes" Canvas.Top="359" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<Button x:Name="btnSignUp" Content="Sign Up" Height="30" Canvas.Left="483" Canvas.Top="403" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="CadetBlue" Foreground="White"/>
+		<Button x:Name="btnSignUp" Content="Sign Up" Height="30" Canvas.Left="483" Canvas.Top="403" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="CadetBlue" Foreground="White" Click="btnSignUp_Click"/>
 		<TextBlock Height="29" Canvas.Left="212" TextWrapping="Wrap" Text="Already have an  account?  "   Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF181947" Canvas.Top="416"/>
-		<Button x:Name="lblLogin" Height="17" Content="Login"  Width="47" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF070DF1" Canvas.Left="355" Canvas.Top="416" Background="#FFEEEEEE" />
+		<Button x:Name="btnLogin" Height="17" Content="Login"  Width="47" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF070DF1" Canvas.Left="355" Canvas.Top="416" Background="#FFEEEEEE" Click="btnLogin_Click" />
 	</Canvas>
 </UserControl>

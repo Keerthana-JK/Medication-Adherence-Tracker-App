@@ -103,3 +103,9 @@ C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\LoginUserCon
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\SignUpUserControl.g.cs
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\SignUpUserControl.baml
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\MedicationWindow.g.cs
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\MedicationWindow.baml
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\EntityFramework.dll
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\EntityFramework.xml
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\EntityFramework.SqlServer.xml

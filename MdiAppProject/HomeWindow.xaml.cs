@@ -22,6 +22,7 @@ namespace MdiAppProject
 		public HomeWindow()
 		{
 			InitializeComponent();
+			DataContext = new LoginViewModel();
 		}
 	}
 }

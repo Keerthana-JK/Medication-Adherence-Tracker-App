@@ -24,5 +24,15 @@ namespace MdiAppProject
 		{
 			InitializeComponent();
 		}
+
+		private void btnLogin_Click(object sender, RoutedEventArgs e)
+		{
+			FormConfig.dashboardWindow.Show();
+        }
+
+		private void lblSignUp_Click(object sender, RoutedEventArgs e)
+		{
+			FormConfig.signUpWindow.Show();
+		}
 	}
 }

@@ -35,6 +35,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -60,7 +66,10 @@
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -101,8 +110,25 @@
     <Compile Include="LoginUserControl.xaml.cs">
       <DependentUpon>LoginUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MdtViewModel.cs" />
-    <Compile Include="Medication.cs" />
+    <Compile Include="LoginViewModel.cs" />
+    <Compile Include="MdtEntityDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdtEntityDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MdtEntityDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdtEntityDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MdtEntityDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Medication.cs">
+      <DependentUpon>MdtEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MedicationScheduleWindow.xaml.cs">
       <DependentUpon>MedicationScheduleWindow.xaml</DependentUpon>
     </Compile>
@@ -222,6 +248,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="MdtEntityDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MdtEntityDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MdtEntityDataModel.edmx.diagram">
+      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -244,6 +277,16 @@
     <Resource Include="docSys.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MdtEntityDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MdtEntityDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="MdtEntityDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>MdtEntityDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -257,6 +300,9 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

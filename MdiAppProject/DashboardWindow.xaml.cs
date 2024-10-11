@@ -22,7 +22,6 @@ namespace MdiAppProject
 		public DashboardWindow()
 		{
 			InitializeComponent();
-			DataContext = new MdtViewModel();
 		}
 
 		private void btnLogOut_Click(object sender, RoutedEventArgs e)

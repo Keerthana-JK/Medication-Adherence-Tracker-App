@@ -11,6 +11,6 @@
 		<Button Content="View Adherence Tracker" Canvas.Left="500" Canvas.Top="25" Height="39" Width="241" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Verdana" FontSize="18"></Button>
 		<Button Content="Edit" Canvas.Left="123" Canvas.Top="363" Height="31" Width="118" FontFamily="Verdana" FontSize="18"/>
 		<Button Content="View Schedule" Canvas.Left="560" Canvas.Top="371" Height="35" Width="170" FontFamily="Verdana" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<DataGrid x:Name="Medication_" Height="215" Canvas.Left="63" Canvas.Top="99" Width="662" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+		<DataGrid x:Name="grdMedications" Height="215" Canvas.Left="63" Canvas.Top="99" Width="662" ItemsSource="{Binding Medication}"/>
 	</Canvas>
 </Window>
