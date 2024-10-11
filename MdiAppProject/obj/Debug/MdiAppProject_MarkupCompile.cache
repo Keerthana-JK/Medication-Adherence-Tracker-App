@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\
+C:\Users\2021489\source\repos\Medication-Adherence-Tracker-App\MdiAppProject\obj\Debug\
 MdiAppProject
 none
 false
 DEBUG;TRACE
-C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\App.xaml
+C:\Users\2021489\source\repos\Medication-Adherence-Tracker-App\MdiAppProject\App.xaml
 12-854641747
 
-23-363643445
-15-1323073861
+221718445173
+15807583643
 AddMedicationWindow.xaml;AdherenceTrackingWindow.xaml;CheckInWindow.xaml;DashboardWindow.xaml;DoctorWindow.xaml;LoginWindow.xaml;MedicationScheduleWindow.xaml;PatientProfileWindow.xaml;RemindersAndNotificationsWindow.xaml;ReportsWindow.xaml;SettingsWindow.xaml;SignUpWindow.xaml;
 
-True
+False
 

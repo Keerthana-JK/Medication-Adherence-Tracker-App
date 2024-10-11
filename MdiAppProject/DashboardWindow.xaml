@@ -9,12 +9,14 @@
 	<DockPanel>
 		<!--Navigation Bar-->
 		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="LightBlue" Height="40" >
-			<Button x:Name="btnMedicationSchedule" Content="Medication Schedule" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToMedicationScheduleCommand}" Click="btnMedicationSchedule_Click"/>
+            <Button x:Name="btnAddMedication" Content="Add Medication" Margin="1" Padding="5" FontSize="14" Click="btnAddMedication_Click"   />
+
+            <Button x:Name="btnMedicationSchedule" Content="Medication Schedule" Margin="1" Padding="5" FontSize="14" Click="btnMedicationSchedule_Click"/>
 			<Button x:Name="btnAdheranceTracking" Content="Adherance Tracking" Margin="1" Padding="5" FontSize="14"  Click="btnAdheranceTracking_Click"></Button>
-			<Button x:Name="btnReminders" Content="Reminders" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToSettingsCommand}" Click="btnReminders_Click"/>
-			<Button x:Name="btnReports" Content="Reports" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToReportsCommand}" Click="btnReports_Click"></Button>
-			<Button x:Name="btnProfile" Content="Profile" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToProfileCommand}" Click="btnProfile_Click"></Button>
-			<Button x:Name="btnSettings" Content="Settings" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToSettingsCommand}" Click="btnSettings_Click"></Button>
+			<Button x:Name="btnReminders" Content="Reminders" Margin="1" Padding="5" FontSize="14"  Click="btnReminders_Click"/>
+			<Button x:Name="btnReports" Content="Reports" Margin="1" Padding="5" FontSize="14"  Click="btnReports_Click"></Button>
+			<Button x:Name="btnProfile" Content="Profile" Margin="1" Padding="5" FontSize="14"  Click="btnProfile_Click"></Button>
+			<Button x:Name="btnSettings" Content="Settings" Margin="1" Padding="5" FontSize="14" Click="btnSettings_Click"></Button>
 			<TextBlock x:Name="lblPatientName" Text="PatientName     " TextAlignment="Right"   VerticalAlignment="Center" Width="190" FontSize="14"></TextBlock>
 			<Button x:Name="btnLogOut" Content="Log out" Margin="1" Padding="5" FontSize="14" Click="btnLogOut_Click"></Button>
 		</StackPanel>

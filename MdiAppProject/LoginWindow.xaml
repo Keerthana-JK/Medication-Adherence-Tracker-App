@@ -8,7 +8,7 @@
         Title="Login Window" Height="450" Width="800"
 WindowStartupLocation="CenterScreen" Closed="Window_Closed">
 
-	<Canvas Background="Lavender">
+	<Canvas  Background="Lavender">
 
 		<TextBlock x:Name="lblLoginPage" Text="Login" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" FontFamily="Verdana" Height="59" Canvas.Left="313" Canvas.Top="10"/>
 

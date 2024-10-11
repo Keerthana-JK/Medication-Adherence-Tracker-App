@@ -70,5 +70,10 @@ namespace MdiAppProject
 		{
 			Application.Current.Shutdown();
 		}
-	}
+
+        private void btnAddMedication_Click(object sender, RoutedEventArgs e)
+        {
+			FormConfig.addMedicationWindow.Show();
+        }
+    }
 }
