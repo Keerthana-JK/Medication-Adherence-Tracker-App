@@ -101,3 +101,5 @@ C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\HomeWindow.b
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\LoginUserControl.g.cs
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\LoginUserControl.baml
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\SignUpUserControl.g.cs
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\SignUpUserControl.baml

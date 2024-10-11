@@ -6,24 +6,22 @@
              xmlns:local="clr-namespace:MdiAppProject"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-	<Border CornerRadius="40" Width="400" Height='450'  HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="1" BorderBrush="Black" Background="Lavender"   >
 
-		<Canvas Background="Lavender">
-			<TextBlock Height="46" Canvas.Left="124" TextWrapping="Wrap" Text="Sign Up" Canvas.Top="18" Width="148" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia"/>
-			<TextBlock x:Name="lblName" Height="26" Canvas.Left="34" TextWrapping="Wrap" Text="Name" Canvas.Top="155" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
-			<TextBlock x:Name="lblEmail" Height="26" Canvas.Left="34" TextWrapping="Wrap" Text="Email" Canvas.Top="201" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
-			<TextBlock x:Name="lblPassword" Height="26" Canvas.Left="34" TextWrapping="Wrap" Text="Password" Canvas.Top="249" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
-			<TextBlock x:Name="lblDateOfBirth" Height="26" Canvas.Left="34" TextWrapping="Wrap" Text="Date  of Birth" Canvas.Top="301" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
-			<Image Height="73" Canvas.Left="159" Canvas.Top="64" Width="75" Source="/userLoginIcon.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"/>
-			<TextBlock x:Name="lblMedicalHistory" Height="26" Canvas.Left="34" TextWrapping="Wrap" Text="Medical History" Canvas.Top="359" Width="135" FontFamily="Georgia" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			<TextBox x:Name="txtName" Height="26" Canvas.Left="174" TextWrapping="Wrap" Text="Collin" Canvas.Top="155" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			<TextBox x:Name="txtEmail" Height="26" Canvas.Left="174" TextWrapping="Wrap" Text="collinfrancy1212@gmail.com" Canvas.Top="198" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			<TextBox x:Name="txtPassword" Height="26" Canvas.Left="173" TextWrapping="Wrap" Text="123" Canvas.Top="249" Width="215" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			<TextBox x:Name="txtDateOfBirth" Height="26" Canvas.Left="173" TextWrapping="Wrap" Text="01-01-2024" Canvas.Top="301" Width="215" HorizontalAlignment="Left" VerticalAlignment="Center" />
-			<TextBox x:Name="txtMedicalHistory" Height="26" Canvas.Left="174" TextWrapping="Wrap" Text="diabetes" Canvas.Top="359" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-			<Button x:Name="btnSignUp" Content="Sign Up" Height="30" Canvas.Left="281" Canvas.Top="403" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="CadetBlue" Foreground="White"/>
-			<TextBlock Height="29" Canvas.Left="10" TextWrapping="Wrap" Text="Already have an  account?  "   Width="190" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF181947" Canvas.Top="416"/>
-			<Button x:Name="lblLogin" Height="17" Content="Login"  Width="47" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF070DF1" Canvas.Left="153" Canvas.Top="416" Background="#FFEEEEEE" Click="lblLogin_Click" />
-		</Canvas>
-	</Border>
+	<Canvas Background="Lavender">
+		<TextBlock Height="46" Canvas.Left="326" TextWrapping="Wrap" Text="Sign Up" Canvas.Top="18" Width="148" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia"/>
+		<TextBlock x:Name="lblName" Height="26" Canvas.Left="236" TextWrapping="Wrap" Text="Name" Canvas.Top="155" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
+		<TextBlock x:Name="lblEmail" Height="26" Canvas.Left="236" TextWrapping="Wrap" Text="Email" Canvas.Top="201" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
+		<TextBlock x:Name="lblPassword" Height="26" Canvas.Left="236" TextWrapping="Wrap" Text="Password" Canvas.Top="249" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
+		<TextBlock x:Name="lblDateOfBirth" Height="26" Canvas.Left="236" TextWrapping="Wrap" Text="Date  of Birth" Canvas.Top="301" Width="97" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" FontSize="16"/>
+		<Image Height="73" Canvas.Left="361" Canvas.Top="64" Width="75" Source="/userLoginIcon.png" HorizontalAlignment="Left" VerticalAlignment="Center" Stretch="Fill"/>
+		<TextBlock x:Name="lblMedicalHistory" Height="26" Canvas.Left="236" TextWrapping="Wrap" Text="Medical History" Canvas.Top="359" Width="135" FontFamily="Georgia" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<TextBox x:Name="txtName" Height="26" Canvas.Left="376" TextWrapping="Wrap" Text="Collin" Canvas.Top="155" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<TextBox x:Name="txtEmail" Height="26" Canvas.Left="376" TextWrapping="Wrap" Text="collinfrancy1212@gmail.com" Canvas.Top="198" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<TextBox x:Name="txtPassword" Height="26" Canvas.Left="375" TextWrapping="Wrap" Text="123" Canvas.Top="249" Width="215" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<TextBox x:Name="txtDateOfBirth" Height="26" Canvas.Left="375" TextWrapping="Wrap" Text="01-01-2024" Canvas.Top="301" Width="215" HorizontalAlignment="Left" VerticalAlignment="Center" />
+		<TextBox x:Name="txtMedicalHistory" Height="26" Canvas.Left="376" TextWrapping="Wrap" Text="diabetes" Canvas.Top="359" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<Button x:Name="btnSignUp" Content="Sign Up" Height="30" Canvas.Left="483" Canvas.Top="403" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="CadetBlue" Foreground="White"/>
+		<TextBlock Height="29" Canvas.Left="212" TextWrapping="Wrap" Text="Already have an  account?  "   Width="190" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF181947" Canvas.Top="416"/>
+		<Button x:Name="lblLogin" Height="17" Content="Login"  Width="47" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="#FF070DF1" Canvas.Left="355" Canvas.Top="416" Background="#FFEEEEEE" />
+	</Canvas>
 </UserControl>

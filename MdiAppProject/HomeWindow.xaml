@@ -8,53 +8,18 @@
         Title="HomeWindow" Height="450" Width="800">
 	<Grid>
 		<TabControl>
-			<TabItem Header="Login">
-				<Canvas Background="Lavender">
 
-					<TextBlock x:Name="lblLoginPage" Text="Login" HorizontalAlignment="Left" FontSize="36" FontWeight="Bold" FontFamily="Verdana" Height="59" Canvas.Left="313" Canvas.Top="10"/>
-
-					<TextBlock x:Name="lblUsername" HorizontalAlignment="Left" Height="42" Margin="172,245,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="130" FontSize="16" FontFamily="Verdana"/>
-					<TextBlock x:Name="lblPassword" HorizontalAlignment="Left" Height="42" Margin="172,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="130" FontSize="16" FontFamily="Verdana"><Run Text="Password"/><LineBreak/><Run/></TextBlock>
-					<TextBox x:Name="txtUserName" HorizontalAlignment="Left" Height="42" Margin="304,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" FontSize="16"/>
-					<PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="42" Margin="304,304,0,0" VerticalAlignment="Top" Width="236" FontSize="16"/>
-					<Image x:Name="imgUserIcon" HorizontalAlignment="Left" Height="129" VerticalAlignment="Top" Width="131" Source="/userLoginIcon.png" Canvas.Left="304" Canvas.Top="88">
-						<Image.OpacityMask>
-							<ImageBrush ImageSource="/LoginIcon.jpg" TileMode="None" Stretch="Uniform"/>
-						</Image.OpacityMask>
-					</Image>
-					<Button x:Name="btnLogin" Background="CadetBlue" Content="Login" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="125" FontSize="16" FontFamily="Verdana" Foreground="White" Canvas.Left="277" Canvas.Top="367"/>
-					<TextBlock Height="23" Canvas.Left="497" TextWrapping="Wrap" Text="Don't have an Account?" Canvas.Top="389" Width="161" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-					<Button x:Name="lblSignUp" Height="23" Content="Sign Up" Width="85" FontSize="14" FontFamily="Verdana" HorizontalAlignment="Left" Canvas.Left="666" Canvas.Top="387" VerticalAlignment="Center"/>
-
-				</Canvas>
-			</TabItem>
-			<TabItem Header="Sign Up">
-				<Grid>
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="*"/>
-					</Grid.ColumnDefinitions>
-					<Grid.RowDefinitions>
-						<RowDefinition Height="Auto"/>
-						<RowDefinition Height="Auto"/>
-						<RowDefinition Height="Auto"/>
-						<RowDefinition Height="Auto"/>
-					</Grid.RowDefinitions>
-					<Label Grid.Row="0" Grid.Column="0" Content="Name:"/>
-					<TextBox Grid.Row="0" Grid.Column="1" Width="200" Margin="5" x:Name="NameTextBox"/>
-					<Label Grid.Row="1" Grid.Column="0" Content="Email:"/>
-					<TextBox Grid.Row="1" Grid.Column="1" Width="200" Margin="5" x:Name="txtEmail"/>
-					<Label Grid.Row="2" Grid.Column="0" Content="Password:"/>
-					<PasswordBox Grid.Row="2" Grid.Column="1" Width="200" Margin="5" x:Name="txtPass"/>
-					<Button Grid.Row="3" Grid.Column="1" Content="Sign Up" HorizontalAlignment="Right" Margin="5" />
-				</Grid>
-			</TabItem>
 			<TabItem Header="Login">
 				<Canvas >
 					<local:LoginUserControl />
-
 				</Canvas>
 			</TabItem>
-			
+			<TabItem Header="Sign Up">
+				<Canvas >
+					<local:SignUpUserControl/>
+				</Canvas>
+			</TabItem>
+
 		</TabControl>
 	</Grid>
 </Window>

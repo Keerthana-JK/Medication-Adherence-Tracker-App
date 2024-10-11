@@ -106,6 +106,9 @@
     <Compile Include="MedicationScheduleWindow.xaml.cs">
       <DependentUpon>MedicationScheduleWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MedicationWindow.xaml.cs">
+      <DependentUpon>MedicationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Patient.cs" />
     <Compile Include="PatientProfileWindow.xaml.cs">
       <DependentUpon>PatientProfileWindow.xaml</DependentUpon>
@@ -169,6 +172,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MedicationScheduleWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MedicationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

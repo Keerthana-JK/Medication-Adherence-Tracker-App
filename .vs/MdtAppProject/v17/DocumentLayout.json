@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\medicationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\medicationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|C:\\Users\\2021454\\source\\repos\\MdtAppProject\\mdiappproject\\signupusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\signupusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|C:\\Users\\2021454\\source\\repos\\MdtAppProject\\mdiappproject\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\loginusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\loginusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\signupusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\signupusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\signupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|C:\\Users\\2021454\\source\\repos\\MdtAppProject\\mdiappproject\\signupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\signupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +38,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "MedicationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\MedicationWindow.xaml",
+              "RelativeDocumentMoniker": "MdiAppProject\\MedicationWindow.xaml",
+              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\MedicationWindow.xaml",
+              "RelativeToolTip": "MdiAppProject\\MedicationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-11T07:11:36.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SignUpWindow.xaml",
               "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\SignUpWindow.xaml",
               "RelativeDocumentMoniker": "MdiAppProject\\SignUpWindow.xaml",
               "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\SignUpWindow.xaml",
               "RelativeToolTip": "MdiAppProject\\SignUpWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-11T06:29:13.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-11T06:29:13.524Z"
             },
             {
               "$type": "Document",
@@ -58,7 +73,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "LoginUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\LoginUserControl.xaml",
               "RelativeDocumentMoniker": "MdiAppProject\\LoginUserControl.xaml",
@@ -70,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "HomeWindow.xaml",
               "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\HomeWindow.xaml",
               "RelativeDocumentMoniker": "MdiAppProject\\HomeWindow.xaml",
