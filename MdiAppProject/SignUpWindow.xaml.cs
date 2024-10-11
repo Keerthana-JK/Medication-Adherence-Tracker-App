@@ -30,5 +30,10 @@ namespace MdiAppProject
 			e.Cancel = true;
 			this.Hide();
 		}
+
+		private void lblLogin_Click(object sender, RoutedEventArgs e)
+		{
+			FormConfig.loginWindow.Show();
+		}
 	}
 }

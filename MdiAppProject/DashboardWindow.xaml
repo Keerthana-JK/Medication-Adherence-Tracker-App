@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MdiAppProject"
         mc:Ignorable="d"
-        Title="Dashboard" Height="450" Width="800" Closed="Window_Closed">
+        Title="Dashboard" Height="450" Width="800" Closed="Window_Closed" Closing="Window_Closing">
 	<DockPanel>
 		<!--Navigation Bar-->
 		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="LightBlue" Height="40" >
 			<Button x:Name="btnMedicationSchedule" Content="Medication Schedule" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToMedicationScheduleCommand}" Click="btnMedicationSchedule_Click"/>
-			<Button x:Name="btnAdheranceTracking" Content="Adherance Tracking" Margin="1" Padding="5" FontSize="14"  Click="btnAdheranceTracking_Click"></Button>
+			<Button x:Name="btnAdherenceTracking" Content="Adherence Tracking" Margin="1" Padding="5" FontSize="14" Click="btnAdherenceTracking_Click"  ></Button>
 			<Button x:Name="btnReminders" Content="Reminders" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToSettingsCommand}" Click="btnReminders_Click"/>
 			<Button x:Name="btnReports" Content="Reports" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToReportsCommand}" Click="btnReports_Click"></Button>
 			<Button x:Name="btnProfile" Content="Profile" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToProfileCommand}" Click="btnProfile_Click"></Button>
@@ -41,14 +41,13 @@
 			</GroupBox>
 
 			<!--Adherance Summary Section-->
-			<GroupBox Header="Adherance Summary" Margin="10,0,10,0" VerticalAlignment="Center" FontFamily="Verdana" FontSize="16" FontWeight="Bold" Height="104">
+			<GroupBox Header="Adherence Summary" Margin="10,0,10,0" VerticalAlignment="Center" FontFamily="Verdana" FontSize="16" FontWeight="Bold" Height="104">
 				<StackPanel>
 					<ProgressBar Value="{Binding AdherancePercentage}" Maximum="100" Height="20"></ProgressBar>
 					<TextBlock Text="{Binding AdheranceText}"></TextBlock>
 				</StackPanel>
 			</GroupBox>
 
-			<!--Notifications Section-->
 			<!--Notifications Section-->
 			<GroupBox Header="Reminders and Notifications" VerticalAlignment="Top" Height="108" Margin="0,266,0,0" FontSize="16" FontFamily="Verdana" FontWeight="Bold">
 				<ListBox x:Name="lstReminders" ItemsSource="{Binding Reminders}">

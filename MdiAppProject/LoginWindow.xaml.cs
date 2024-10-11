@@ -27,7 +27,7 @@ namespace MdiAppProject
 
 		private void lblSignUp_Click(object sender, RoutedEventArgs e)
 		{
-			WindowConfig.SignUpWindow.Show();
+			FormConfig.signUpWindow.Show();
 		}
 
 		private void Window_Closed(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace MdiAppProject
 
 		private void btnLogin_Click(object sender, RoutedEventArgs e)
 		{
-			WindowConfig.DashboardWindow.Show();
+			FormConfig.dashboardWindow.ShowDialog();
 		}
 	}
 }

@@ -8,7 +8,7 @@
         Title="AddMedicationWindow" Height="450" Width="800">
 
 	<Canvas>
-		<TextBlock x:Name="lblNewMedication" Background="Wheat" TextAlignment="Center"  TextWrapping="Wrap" Text="New Medication" FontFamily="Georgia" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Width="780" Height="78"/>
+		<TextBlock x:Name="lblNewMedication" Background="Wheat" TextAlignment="Center"  TextWrapping="Wrap" Text="New Medication" FontFamily="Georgia" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center" Width="800" Height="78"/>
 		<TextBlock x:Name="lblMedicationName" Foreground="Beige"  TextWrapping="Wrap" Text="Medication Name" Canvas.Left="138" Canvas.Top="118" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Georgia"/>
 		<TextBlock x:Name="lblDosage" TextWrapping="Wrap"  Foreground="Beige"  Text="Dosage" Canvas.Left="141" Canvas.Top="287" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" Width="139"/>
 		<TextBlock x:Name="lblFrequency"  Foreground="Beige"  TextWrapping="Wrap" Text="Frequency" Canvas.Left="140" Canvas.Top="337" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Georgia" Width="140"/>
@@ -29,7 +29,7 @@
 		<TextBox x:Name="txtFrequency" TextWrapping="Wrap"  Background="CadetBlue" Text="" Width="120" Canvas.Left="444" Canvas.Top="335" TextBlock.FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontFamily="Georgia"/>
 		<DatePicker Canvas.Left="442" Canvas.Top="169"  Background="CadetBlue" HorizontalAlignment="Left" VerticalAlignment="Center" Width="116"/>
 		<DatePicker Canvas.Left="444" Canvas.Top="217"  Background="CadetBlue" Width="116" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<Button x:Name="btnCreate"  Background="CadetBlue"  Content="Create" Canvas.Left="329" Canvas.Top="380" HorizontalAlignment="Left" VerticalAlignment="Center" Width="71"/>
+		<Button x:Name="btnCreate"  Background="CadetBlue" Foreground="White" Content="Create" Canvas.Left="315" Canvas.Top="380" HorizontalAlignment="Left" VerticalAlignment="Center" Width="85" Height="34"/>
 
 
 	</Canvas>

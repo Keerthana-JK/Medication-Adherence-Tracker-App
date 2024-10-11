@@ -27,48 +27,53 @@ namespace MdiAppProject
 
 		private void btnLogOut_Click(object sender, RoutedEventArgs e)
 		{
-			WindowConfig.LoginWindow.Show();
-		}
-
-		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-		{
-			e.Cancel = true;
-			this.Hide();
+			FormConfig.loginWindow.Show();
 		}
 
 		private void btnMedicationSchedule_Click(object sender, RoutedEventArgs e)
 		{
-			FormConfig.medicationScheduleWindow.Show();
+			FormConfig.medicationScheduleWindow.ShowDialog();
 		}
 
 		private void btnAdheranceTracking_Click(object sender, RoutedEventArgs e)
 		{
-			FormConfig.adheranceTrackingWindow.Show();
+			FormConfig.adheranceTrackingWindow.ShowDialog();
 		}
 
 		private void btnReports_Click(object sender, RoutedEventArgs e)
 		{
-			FormConfig.reportsWindow.Show();
+			FormConfig.reportsWindow.ShowDialog();
 		}
 
 		private void btnProfile_Click(object sender, RoutedEventArgs e)
 		{
-			FormConfig.patientProfileWindow.Show();
+			FormConfig.patientProfileWindow.ShowDialog();
 		}
 
 		private void btnSettings_Click(object sender, RoutedEventArgs e)
 		{
-			FormConfig.settingsWindow.Show();
+			FormConfig.settingsWindow.ShowDialog();
 		}
 
 		private void btnReminders_Click(object sender, RoutedEventArgs e)
 		{
-			FormConfig.remindersAndNotificationsWindow.Show();
+			FormConfig.remindersAndNotificationsWindow.ShowDialog();
 		}
 
 		private void Window_Closed(object sender, EventArgs e)
 		{
 			Application.Current.Shutdown();
+		}
+
+		private void btnAdherenceTracking_Click(object sender, RoutedEventArgs e)
+		{
+			FormConfig.adheranceTrackingWindow.ShowDialog();
+		}
+
+		private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+		{
+			e.Cancel=true;
+			this.Hide();
 		}
 	}
 }

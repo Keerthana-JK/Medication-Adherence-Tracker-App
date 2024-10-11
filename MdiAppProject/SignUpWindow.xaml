@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MdiAppProject"
         mc:Ignorable="d"
-        Title="Sign Up" Height="450" Width="800" Closing="Window_Closing">
+        Title="Sign Up" Height="550" Width="800" Closing="Window_Closing">
 	<Window.Background>
 		<ImageBrush ImageSource="/docSys.jpeg"/>
 	</Window.Background>
@@ -26,7 +26,7 @@
 			<TextBox x:Name="txtMedicalHistory" Height="26" Canvas.Left="174" TextWrapping="Wrap" Text="diabetes" Canvas.Top="359" Width="214" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 			<Button x:Name="btnSignUp" Content="Sign Up" Height="30" Canvas.Left="281" Canvas.Top="403" Width="80" HorizontalAlignment="Left" VerticalAlignment="Center"  Background="CadetBlue" Foreground="White"/>
 			<TextBlock Height="29" Canvas.Left="10" TextWrapping="Wrap" Text="Already have an  account?  "   Width="190" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF181947" Canvas.Top="416"/>
-			<TextBox x:Name="lblLogin" Height="17"  TextWrapping="Wrap" Text="Login"  Width="47" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF070DF1" Canvas.Left="153" Canvas.Top="416" Background="#FFEEEEEE" />
+			<Button x:Name="lblLogin" Height="17" Content="Login"  Width="47" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FF070DF1" Canvas.Left="153" Canvas.Top="416" Background="#FFEEEEEE" Click="lblLogin_Click" />
 		</Canvas>
 	</Border>
 </Window>
