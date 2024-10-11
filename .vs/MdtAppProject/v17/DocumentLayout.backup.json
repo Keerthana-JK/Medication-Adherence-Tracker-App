@@ -3,44 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\dashboardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\dashboardwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\medicationschedulewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\medicationschedulewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\signupwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\signupwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\mdtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\mdtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\addmedicationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\addmedicationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\doctorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\doctorwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\addmedicationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\addmedicationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\adherencetrackingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\adherencetrackingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|c:\\users\\2021454\\source\\repos\\mdtappproject\\mdiappproject\\loginusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{69C3620C-EBA4-4BE6-B2E1-D250D977405C}|MdiAppProject\\MdtAppProject.csproj|solutionrelative:mdiappproject\\loginusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,46 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashboardWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\DashboardWindow.xaml",
-              "RelativeDocumentMoniker": "MdiAppProject\\DashboardWindow.xaml",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\DashboardWindow.xaml*",
-              "RelativeToolTip": "MdiAppProject\\DashboardWindow.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-10T09:21:49.726Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MedicationScheduleWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\MedicationScheduleWindow.xaml",
-              "RelativeDocumentMoniker": "MdiAppProject\\MedicationScheduleWindow.xaml",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\MedicationScheduleWindow.xaml",
-              "RelativeToolTip": "MdiAppProject\\MedicationScheduleWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-10T11:42:57.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SignUpWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\SignUpWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MdiAppProject\\SignUpWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\SignUpWindow.xaml.cs",
-              "RelativeToolTip": "MdiAppProject\\SignUpWindow.xaml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAawCMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:52:53.427Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -97,89 +27,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DashboardWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\DashboardWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MdiAppProject\\DashboardWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\DashboardWindow.xaml.cs",
-              "RelativeToolTip": "MdiAppProject\\DashboardWindow.xaml.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAIA3wEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:21:54.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AddMedicationWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\AddMedicationWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MdiAppProject\\AddMedicationWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\AddMedicationWindow.xaml.cs",
-              "RelativeToolTip": "MdiAppProject\\AddMedicationWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:31:58.521Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MdtViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\MdtViewModel.cs",
-              "RelativeDocumentMoniker": "MdiAppProject\\MdtViewModel.cs",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\MdtViewModel.cs",
-              "RelativeToolTip": "MdiAppProject\\MdtViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwBAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:45:19.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MdiAppProject\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "MdiAppProject\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAxwB0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-10T09:52:59.885Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DoctorWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\DoctorWindow.xaml",
-              "RelativeDocumentMoniker": "MdiAppProject\\DoctorWindow.xaml",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\DoctorWindow.xaml",
-              "RelativeToolTip": "MdiAppProject\\DoctorWindow.xaml",
+              "Title": "LoginUserControl.xaml",
+              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\LoginUserControl.xaml",
+              "RelativeDocumentMoniker": "MdiAppProject\\LoginUserControl.xaml",
+              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\LoginUserControl.xaml",
+              "RelativeToolTip": "MdiAppProject\\LoginUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-10T09:20:40.554Z",
+              "WhenOpened": "2024-10-11T06:15:57.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AddMedicationWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\AddMedicationWindow.xaml",
-              "RelativeDocumentMoniker": "MdiAppProject\\AddMedicationWindow.xaml",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\AddMedicationWindow.xaml",
-              "RelativeToolTip": "MdiAppProject\\AddMedicationWindow.xaml",
+              "DocumentIndex": 0,
+              "Title": "HomeWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\HomeWindow.xaml",
+              "RelativeDocumentMoniker": "MdiAppProject\\HomeWindow.xaml",
+              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\HomeWindow.xaml*",
+              "RelativeToolTip": "MdiAppProject\\HomeWindow.xaml*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-10T09:22:35.961Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AdherenceTrackingWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\AdherenceTrackingWindow.xaml",
-              "RelativeDocumentMoniker": "MdiAppProject\\AdherenceTrackingWindow.xaml",
-              "ToolTip": "C:\\Users\\2021454\\source\\repos\\MdtAppProject\\MdiAppProject\\AdherenceTrackingWindow.xaml",
-              "RelativeToolTip": "MdiAppProject\\AdherenceTrackingWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-10T09:25:02.36Z",
+              "WhenOpened": "2024-10-11T06:13:14.993Z",
               "EditorCaption": ""
             }
           ]

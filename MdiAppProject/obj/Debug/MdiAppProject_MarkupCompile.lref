@@ -5,6 +5,7 @@ FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\AdherenceTrackingWind
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\CheckInWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\DashboardWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\DoctorWindow.xaml;;
+FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\HomeWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\LoginWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\MedicationScheduleWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\PatientProfileWindow.xaml;;
@@ -12,4 +13,5 @@ FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\RemindersAndNotificat
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\ReportsWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\SettingsWindow.xaml;;
 FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\SignUpWindow.xaml;;
+FC:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\LoginUserControl.xaml;;
 

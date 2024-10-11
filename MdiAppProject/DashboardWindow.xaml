@@ -9,6 +9,7 @@
 	<DockPanel>
 		<!--Navigation Bar-->
 		<StackPanel Orientation="Horizontal" DockPanel.Dock="Top" Background="LightBlue" Height="40" >
+			<Button x:Name="btnAddMedication" Content="Add Medication" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToMedicationScheduleCommand}" Click="btnAddMedication_Click" />
 			<Button x:Name="btnMedicationSchedule" Content="Medication Schedule" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToMedicationScheduleCommand}" Click="btnMedicationSchedule_Click"/>
 			<Button x:Name="btnAdherenceTracking" Content="Adherence Tracking" Margin="1" Padding="5" FontSize="14" Click="btnAdherenceTracking_Click"  ></Button>
 			<Button x:Name="btnReminders" Content="Reminders" Margin="1" Padding="5" FontSize="14" Command="{Binding NavToSettingsCommand}" Click="btnReminders_Click"/>

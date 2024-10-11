@@ -75,5 +75,10 @@ namespace MdiAppProject
 			e.Cancel=true;
 			this.Hide();
 		}
-	}
+
+		private void btnAddMedication_Click(object sender, RoutedEventArgs e)
+		{
+			FormConfig.addMedicationWindow.ShowDialog();
+		}
+    }
 }

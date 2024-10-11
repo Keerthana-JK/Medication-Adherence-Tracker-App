@@ -96,3 +96,8 @@ C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\ru\Microsoft
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\MdiAppProject_Content.g.cs
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\HomeWindow.g.cs
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\HomeWindow.baml
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\LoginUserControl.g.cs
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\LoginUserControl.baml
+C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\obj\Debug\GeneratedInternalTypeHelper.g.cs

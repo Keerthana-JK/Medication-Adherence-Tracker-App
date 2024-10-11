@@ -95,11 +95,18 @@
       <DependentUpon>DoctorWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="FormConfig.cs" />
+    <Compile Include="HomeWindow.xaml.cs">
+      <DependentUpon>HomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUserControl.xaml.cs">
+      <DependentUpon>LoginUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MdtViewModel.cs" />
     <Compile Include="Medication.cs" />
     <Compile Include="MedicationScheduleWindow.xaml.cs">
       <DependentUpon>MedicationScheduleWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Patient.cs" />
     <Compile Include="PatientProfileWindow.xaml.cs">
       <DependentUpon>PatientProfileWindow.xaml</DependentUpon>
     </Compile>
@@ -113,6 +120,9 @@
     </Compile>
     <Compile Include="SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpUserControl.xaml.cs">
+      <DependentUpon>SignUpUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="SignUpWindow.xaml.cs">
       <DependentUpon>SignUpWindow.xaml</DependentUpon>
@@ -135,6 +145,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DoctorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -167,6 +185,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SettingsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignUpUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
