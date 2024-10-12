@@ -16,7 +16,7 @@
 		<PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Height="42" Margin="304,304,0,0" VerticalAlignment="Top" Width="236" FontSize="16"/>
 		<Button x:Name="btnLogin" Background="CadetBlue" Content="Login" HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="125" FontSize="16" FontFamily="Verdana" Foreground="White" Canvas.Left="277" Canvas.Top="367" Click="btnLogin_Click"/>
 		<TextBlock Height="23" Canvas.Left="497" TextWrapping="Wrap" Text="Don't have an Account?" Canvas.Top="389" Width="161" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<Button x:Name="lblSignUp" Height="23" Content="Sign Up" Width="85" FontSize="14" FontFamily="Verdana" HorizontalAlignment="Left" Canvas.Left="666" Canvas.Top="387" VerticalAlignment="Center" Click="lblSignUp_Click"/>
+		<Button x:Name="lblSignUp" Height="23" Content="Sign Up" Width="85" FontSize="14" FontFamily="Verdana" HorizontalAlignment="Left" Canvas.Left="666" Canvas.Top="387" VerticalAlignment="Center" />
 
 	</Canvas>
 </UserControl>

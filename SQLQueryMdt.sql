@@ -14,6 +14,7 @@ use Mdt;
        UpdatedAt DATETIME
    );
 
+--2. Medications Table
 CREATE TABLE Medications (
        MedicationID INT PRIMARY KEY IDENTITY(1,1),
        UserID INT FOREIGN KEY REFERENCES Users(UserID),
@@ -25,6 +26,77 @@ CREATE TABLE Medications (
        CreatedAt DATETIME DEFAULT GETDATE(),
        UpdatedAt DATETIME
    );
+
+--3. MedicationSchedules Table
+   CREATE TABLE MedicationSchedules (
+       ScheduleID INT PRIMARY KEY IDENTITY(1,1),
+       MedicationID INT FOREIGN KEY REFERENCES Medications(MedicationID),
+       ScheduledTime DATETIME NOT NULL,
+       Status NVARCHAR(20) DEFAULT 'Pending',  -- e.g., 'Pending', 'Taken', 'Missed'
+       CreatedAt DATETIME DEFAULT GETDATE()
+   );
+--4. CheckIns Table
+   CREATE TABLE CheckIns (
+       CheckInID INT PRIMARY KEY IDENTITY(1,1),
+       ScheduleID INT FOREIGN KEY REFERENCES MedicationSchedules(ScheduleID),
+       CheckInTime DATETIME NOT NULL,
+       AdherenceStatus NVARCHAR(20) NOT NULL,  -- e.g., 'Taken', 'Missed'
+       SideEffects NVARCHAR(MAX),
+       CreatedAt DATETIME DEFAULT GETDATE()
+   );
+
+--5. Reminders Table
+   CREATE TABLE Reminders (
+       ReminderID INT PRIMARY KEY IDENTITY(1,1),
+       UserID INT FOREIGN KEY REFERENCES Users(UserID),
+       ScheduleID INT FOREIGN KEY REFERENCES MedicationSchedules(ScheduleID),
+       ReminderTime DATETIME NOT NULL,
+       Message NVARCHAR(255) NOT NULL,
+       Status NVARCHAR(20) DEFAULT 'Sent',  -- e.g., 'Sent', 'Delivered', 'Read'
+       CreatedAt DATETIME DEFAULT GETDATE()
+   );
+
+--6. Notifications Table
+   CREATE TABLE Notifications (
+       NotificationID INT PRIMARY KEY IDENTITY(1,1),
+       UserID INT FOREIGN KEY REFERENCES Users(UserID),
+       NotificationType NVARCHAR(50) NOT NULL,  -- e.g., 'Adherence Report', 'Message from Doctor'
+       Message NVARCHAR(MAX) NOT NULL,
+       SentAt DATETIME DEFAULT GETDATE(),
+       Status NVARCHAR(20) DEFAULT 'Unread'  -- e.g., 'Unread', 'Read'
+   );
+
+--7. Goals Table (Optional)
+   CREATE TABLE Goals (
+       GoalID INT PRIMARY KEY IDENTITY(1,1),
+       UserID INT FOREIGN KEY REFERENCES Users(UserID),
+       GoalType NVARCHAR(100) NOT NULL,  -- e.g., 'Adherence Goal'
+       TargetValue INT NOT NULL,  -- e.g., 90% adherence target
+       StartDate DATE NOT NULL,
+       EndDate DATE,
+       Status NVARCHAR(20) DEFAULT 'Active',  -- e.g., 'Active', 'Achieved'
+       CreatedAt DATETIME DEFAULT GETDATE(),
+       UpdatedAt DATETIME
+   );
+
+--8. Doctors Table (Optional)
+   CREATE TABLE Doctors (
+       DoctorID INT PRIMARY KEY IDENTITY(1,1),
+       Name NVARCHAR(100) NOT NULL,
+       Specialization NVARCHAR(100),
+       ContactInfo NVARCHAR(255),
+       CreatedAt DATETIME DEFAULT GETDATE(),
+       UpdatedAt DATETIME
+   );
+
+--9. Doctor_Patient Table (Optional)
+   CREATE TABLE Doctor_Patient (
+       DoctorPatientID INT PRIMARY KEY IDENTITY(1,1),
+       DoctorID INT FOREIGN KEY REFERENCES Doctors(DoctorID),
+       UserID INT FOREIGN KEY REFERENCES Users(UserID),
+       AssignedAt DATETIME DEFAULT GETDATE()
+   );
+
 
 --INSERT QUERIES
 

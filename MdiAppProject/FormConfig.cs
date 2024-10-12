@@ -20,9 +20,7 @@ namespace MdiAppProject
 		public static DoctorWindow doctorWindow = null;
 		public static ReportsWindow reportsWindow = null;
 		public static SettingsWindow settingsWindow = null;
-
-
-
+		public static MedicationWindow medicationWindow = null;
 
 		static FormConfig()
 		{
@@ -38,6 +36,7 @@ namespace MdiAppProject
 			doctorWindow = new DoctorWindow();
 			reportsWindow = new ReportsWindow();
 			settingsWindow = new SettingsWindow();
+			medicationWindow = new MedicationWindow();
 		}
 	}
 }

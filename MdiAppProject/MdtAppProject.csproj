@@ -94,40 +94,56 @@
     <Compile Include="AdherenceTrackingWindow.xaml.cs">
       <DependentUpon>AdherenceTrackingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CheckIn.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CheckInWindow.xaml.cs">
       <DependentUpon>CheckInWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="DashboardWindow.xaml.cs">
       <DependentUpon>DashboardWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DoctorWindow.xaml.cs">
       <DependentUpon>DoctorWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Doctor_Patient.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormConfig.cs" />
+    <Compile Include="Goal.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="HomeWindow.xaml.cs">
       <DependentUpon>HomeWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IMedicationRepo.cs" />
     <Compile Include="LoginUserControl.xaml.cs">
       <DependentUpon>LoginUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginViewModel.cs" />
-    <Compile Include="MdtEntityDataModel.Context.cs">
+    <Compile Include="MdtAppEntityDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MdtEntityDataModel.Context.tt</DependentUpon>
+      <DependentUpon>MdtAppEntityDataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MdtEntityDataModel.cs">
+    <Compile Include="MdtAppEntityDataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MdtEntityDataModel.tt</DependentUpon>
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MdtEntityDataModel.Designer.cs">
+    <Compile Include="MdtAppEntityDataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+      <DependentUpon>MdtAppEntityDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Medication.cs">
-      <DependentUpon>MdtEntityDataModel.tt</DependentUpon>
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedicationSchedule.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MedicationScheduleWindow.xaml.cs">
       <DependentUpon>MedicationScheduleWindow.xaml</DependentUpon>
@@ -135,12 +151,27 @@
     <Compile Include="MedicationWindow.xaml.cs">
       <DependentUpon>MedicationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Notification.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Orm\ICheckInsRepo.cs" />
+    <Compile Include="Orm\IDoctorsRepo.cs" />
+    <Compile Include="Orm\IDoctor_PatientRepo.cs" />
+    <Compile Include="Orm\IGoalsRepo.cs" />
+    <Compile Include="Orm\IMedicationSchedulesRepo.cs" />
+    <Compile Include="Orm\IMedicationsRepo.cs" />
+    <Compile Include="Orm\INotificationsRepo.cs" />
+    <Compile Include="Orm\IRemindersRepo.cs" />
+    <Compile Include="Orm\IUsersRepo.cs" />
     <Compile Include="Patient.cs" />
+    <Compile Include="MedicationMemoryRepo.cs" />
     <Compile Include="PatientProfileWindow.xaml.cs">
       <DependentUpon>PatientProfileWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="RelayCommand.cs" />
-    <Compile Include="Reminder.cs" />
+    <Compile Include="Reminder.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="RemindersAndNotificationsWindow.xaml.cs">
       <DependentUpon>RemindersAndNotificationsWindow.xaml</DependentUpon>
     </Compile>
@@ -157,6 +188,9 @@
       <DependentUpon>SignUpWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
+    </Compile>
     <Page Include="AddMedicationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -248,12 +282,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="MdtEntityDataModel.edmx">
+    <EntityDeploy Include="MdtAppEntityDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MdtEntityDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>MdtAppEntityDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="MdtEntityDataModel.edmx.diagram">
-      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+    <None Include="MdtAppEntityDataModel.edmx.diagram">
+      <DependentUpon>MdtAppEntityDataModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -277,15 +311,15 @@
     <Resource Include="docSys.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MdtEntityDataModel.Context.tt">
+    <Content Include="MdtAppEntityDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>MdtEntityDataModel.Context.cs</LastGenOutput>
-      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
+      <DependentUpon>MdtAppEntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>MdtAppEntityDataModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="MdtEntityDataModel.tt">
+    <Content Include="MdtAppEntityDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MdtEntityDataModel.edmx</DependentUpon>
-      <LastGenOutput>MdtEntityDataModel.cs</LastGenOutput>
+      <DependentUpon>MdtAppEntityDataModel.edmx</DependentUpon>
+      <LastGenOutput>MdtAppEntityDataModel.cs</LastGenOutput>
     </Content>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
@@ -304,5 +338,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

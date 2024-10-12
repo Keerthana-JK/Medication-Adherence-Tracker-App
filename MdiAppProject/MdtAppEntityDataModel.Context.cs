@@ -13,10 +13,10 @@ namespace MdiAppProject
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MdtEntities : DbContext
+    public partial class MdtEntities2 : DbContext
     {
-        public MdtEntities()
-            : base("name=MdtEntities")
+        public MdtEntities2()
+            : base("name=MdtEntities2")
         {
         }
     
@@ -25,6 +25,14 @@ namespace MdiAppProject
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CheckIn> CheckIns { get; set; }
+        public virtual DbSet<Doctor_Patient> Doctor_Patient { get; set; }
+        public virtual DbSet<Doctor> Doctors { get; set; }
+        public virtual DbSet<Goal> Goals { get; set; }
         public virtual DbSet<Medication> Medications { get; set; }
+        public virtual DbSet<MedicationSchedule> MedicationSchedules { get; set; }
+        public virtual DbSet<Notification> Notifications { get; set; }
+        public virtual DbSet<Reminder> Reminders { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

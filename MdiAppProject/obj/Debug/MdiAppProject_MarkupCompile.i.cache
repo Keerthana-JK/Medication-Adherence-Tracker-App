@@ -11,10 +11,10 @@ false
 DEBUG;TRACE
 C:\Users\2021454\source\repos\MdtAppProject\MdiAppProject\App.xaml
 161622624232
-72087837372
-31-1445487631
+7868101158
+491366579608
 26-444442876
 AddMedicationWindow.xaml;AdherenceTrackingWindow.xaml;CheckInWindow.xaml;DashboardWindow.xaml;DoctorWindow.xaml;HomeWindow.xaml;LoginUserControl.xaml;LoginWindow.xaml;MedicationScheduleWindow.xaml;MedicationWindow.xaml;PatientProfileWindow.xaml;RemindersAndNotificationsWindow.xaml;ReportsWindow.xaml;SettingsWindow.xaml;SignUpUserControl.xaml;SignUpWindow.xaml;
 
-True
+False
 

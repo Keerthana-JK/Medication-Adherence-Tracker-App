@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MdtModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CheckIns">
+          <Key>
+            <PropertyRef Name="CheckInID" />
+          </Key>
+          <Property Name="CheckInID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScheduleID" Type="int" />
+          <Property Name="CheckInTime" Type="datetime" Nullable="false" />
+          <Property Name="AdherenceStatus" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="SideEffects" Type="nvarchar(max)" />
+          <Property Name="CreatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Doctor_Patient">
+          <Key>
+            <PropertyRef Name="DoctorPatientID" />
+          </Key>
+          <Property Name="DoctorPatientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DoctorID" Type="int" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="AssignedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Doctors">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Specialization" Type="nvarchar" MaxLength="100" />
+          <Property Name="ContactInfo" Type="nvarchar" MaxLength="255" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="UpdatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Goals">
+          <Key>
+            <PropertyRef Name="GoalID" />
+          </Key>
+          <Property Name="GoalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="GoalType" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="TargetValue" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="UpdatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Medications">
+          <Key>
+            <PropertyRef Name="MedicationID" />
+          </Key>
+          <Property Name="MedicationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="MedicationName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Dosage" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Frequency" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="UpdatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MedicationSchedules">
+          <Key>
+            <PropertyRef Name="ScheduleID" />
+          </Key>
+          <Property Name="ScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MedicationID" Type="int" />
+          <Property Name="ScheduledTime" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Notifications">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="NotificationType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SentAt" Type="datetime" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Reminders">
+          <Key>
+            <PropertyRef Name="ReminderID" />
+          </Key>
+          <Property Name="ReminderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="ScheduleID" Type="int" />
+          <Property Name="ReminderTime" Type="datetime" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreatedAt" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="MedicalHistory" Type="nvarchar(max)" />
+          <Property Name="CreatedAt" Type="datetime" />
+          <Property Name="UpdatedAt" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__CheckIns__Schedu__4F7CD00D">
+          <End Role="MedicationSchedules" Type="Self.MedicationSchedules" Multiplicity="0..1" />
+          <End Role="CheckIns" Type="Self.CheckIns" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedicationSchedules">
+              <PropertyRef Name="ScheduleID" />
+            </Principal>
+            <Dependent Role="CheckIns">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Doctor_Pa__Docto__656C112C">
+          <End Role="Doctors" Type="Self.Doctors" Multiplicity="0..1" />
+          <End Role="Doctor_Patient" Type="Self.Doctor_Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctors">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="Doctor_Patient">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Doctor_Pa__UserI__66603565">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Doctor_Patient" Type="Self.Doctor_Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Doctor_Patient">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Goals__UserID__5DCAEF64">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Goals" Type="Self.Goals" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Goals">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicatio__Medic__4AB81AF0">
+          <End Role="Medications" Type="Self.Medications" Multiplicity="0..1" />
+          <End Role="MedicationSchedules" Type="Self.MedicationSchedules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medications">
+              <PropertyRef Name="MedicationID" />
+            </Principal>
+            <Dependent Role="MedicationSchedules">
+              <PropertyRef Name="MedicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicatio__UserI__3D5E1FD2">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Medications" Type="Self.Medications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Medications">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Notificat__UserI__59063A47">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Notifications" Type="Self.Notifications" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Notifications">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reminders__Sched__5441852A">
+          <End Role="MedicationSchedules" Type="Self.MedicationSchedules" Multiplicity="0..1" />
+          <End Role="Reminders" Type="Self.Reminders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedicationSchedules">
+              <PropertyRef Name="ScheduleID" />
+            </Principal>
+            <Dependent Role="Reminders">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reminders__UserI__534D60F1">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Reminders" Type="Self.Reminders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Reminders">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MdtModelStoreContainer">
+          <EntitySet Name="CheckIns" EntityType="Self.CheckIns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Doctor_Patient" EntityType="Self.Doctor_Patient" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Doctors" EntityType="Self.Doctors" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Goals" EntityType="Self.Goals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medications" EntityType="Self.Medications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MedicationSchedules" EntityType="Self.MedicationSchedules" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notifications" EntityType="Self.Notifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reminders" EntityType="Self.Reminders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CheckIns__Schedu__4F7CD00D" Association="Self.FK__CheckIns__Schedu__4F7CD00D">
+            <End Role="MedicationSchedules" EntitySet="MedicationSchedules" />
+            <End Role="CheckIns" EntitySet="CheckIns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Doctor_Pa__Docto__656C112C" Association="Self.FK__Doctor_Pa__Docto__656C112C">
+            <End Role="Doctors" EntitySet="Doctors" />
+            <End Role="Doctor_Patient" EntitySet="Doctor_Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Doctor_Pa__UserI__66603565" Association="Self.FK__Doctor_Pa__UserI__66603565">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Doctor_Patient" EntitySet="Doctor_Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Goals__UserID__5DCAEF64" Association="Self.FK__Goals__UserID__5DCAEF64">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Goals" EntitySet="Goals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicatio__Medic__4AB81AF0" Association="Self.FK__Medicatio__Medic__4AB81AF0">
+            <End Role="Medications" EntitySet="Medications" />
+            <End Role="MedicationSchedules" EntitySet="MedicationSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicatio__UserI__3D5E1FD2" Association="Self.FK__Medicatio__UserI__3D5E1FD2">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Medications" EntitySet="Medications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Notificat__UserI__59063A47" Association="Self.FK__Notificat__UserI__59063A47">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Notifications" EntitySet="Notifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reminders__Sched__5441852A" Association="Self.FK__Reminders__Sched__5441852A">
+            <End Role="MedicationSchedules" EntitySet="MedicationSchedules" />
+            <End Role="Reminders" EntitySet="Reminders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reminders__UserI__534D60F1" Association="Self.FK__Reminders__UserI__534D60F1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Reminders" EntitySet="Reminders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MdtModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="CheckIn">
+          <Key>
+            <PropertyRef Name="CheckInID" />
+          </Key>
+          <Property Name="CheckInID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScheduleID" Type="Int32" />
+          <Property Name="CheckInTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AdherenceStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SideEffects" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MedicationSchedule" Relationship="Self.FK__CheckIns__Schedu__4F7CD00D" FromRole="CheckIns" ToRole="MedicationSchedules" />
+        </EntityType>
+        <EntityType Name="Doctor_Patient">
+          <Key>
+            <PropertyRef Name="DoctorPatientID" />
+          </Key>
+          <Property Name="DoctorPatientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DoctorID" Type="Int32" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="AssignedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Doctor" Relationship="Self.FK__Doctor_Pa__Docto__656C112C" FromRole="Doctor_Patient" ToRole="Doctors" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Doctor_Pa__UserI__66603565" FromRole="Doctor_Patient" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="DoctorID" />
+          </Key>
+          <Property Name="DoctorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Specialization" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ContactInfo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Doctor_Patient" Relationship="Self.FK__Doctor_Pa__Docto__656C112C" FromRole="Doctors" ToRole="Doctor_Patient" />
+        </EntityType>
+        <EntityType Name="Goal">
+          <Key>
+            <PropertyRef Name="GoalID" />
+          </Key>
+          <Property Name="GoalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="GoalType" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TargetValue" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Goals__UserID__5DCAEF64" FromRole="Goals" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Medication">
+          <Key>
+            <PropertyRef Name="MedicationID" />
+          </Key>
+          <Property Name="MedicationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="MedicationName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Dosage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Frequency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MedicationSchedules" Relationship="Self.FK__Medicatio__Medic__4AB81AF0" FromRole="Medications" ToRole="MedicationSchedules" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Medicatio__UserI__3D5E1FD2" FromRole="Medications" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="MedicationSchedule">
+          <Key>
+            <PropertyRef Name="ScheduleID" />
+          </Key>
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MedicationID" Type="Int32" />
+          <Property Name="ScheduledTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="CheckIns" Relationship="Self.FK__CheckIns__Schedu__4F7CD00D" FromRole="MedicationSchedules" ToRole="CheckIns" />
+          <NavigationProperty Name="Medication" Relationship="Self.FK__Medicatio__Medic__4AB81AF0" FromRole="MedicationSchedules" ToRole="Medications" />
+          <NavigationProperty Name="Reminders" Relationship="Self.FK__Reminders__Sched__5441852A" FromRole="MedicationSchedules" ToRole="Reminders" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="NotificationID" />
+          </Key>
+          <Property Name="NotificationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="NotificationType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SentAt" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Notificat__UserI__59063A47" FromRole="Notifications" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Reminder">
+          <Key>
+            <PropertyRef Name="ReminderID" />
+          </Key>
+          <Property Name="ReminderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="ScheduleID" Type="Int32" />
+          <Property Name="ReminderTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Message" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="MedicationSchedule" Relationship="Self.FK__Reminders__Sched__5441852A" FromRole="Reminders" ToRole="MedicationSchedules" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Reminders__UserI__534D60F1" FromRole="Reminders" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="MedicalHistory" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedAt" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Doctor_Patient" Relationship="Self.FK__Doctor_Pa__UserI__66603565" FromRole="Users" ToRole="Doctor_Patient" />
+          <NavigationProperty Name="Goals" Relationship="Self.FK__Goals__UserID__5DCAEF64" FromRole="Users" ToRole="Goals" />
+          <NavigationProperty Name="Medications" Relationship="Self.FK__Medicatio__UserI__3D5E1FD2" FromRole="Users" ToRole="Medications" />
+          <NavigationProperty Name="Notifications" Relationship="Self.FK__Notificat__UserI__59063A47" FromRole="Users" ToRole="Notifications" />
+          <NavigationProperty Name="Reminders" Relationship="Self.FK__Reminders__UserI__534D60F1" FromRole="Users" ToRole="Reminders" />
+        </EntityType>
+        <Association Name="FK__CheckIns__Schedu__4F7CD00D">
+          <End Role="MedicationSchedules" Type="Self.MedicationSchedule" Multiplicity="0..1" />
+          <End Role="CheckIns" Type="Self.CheckIn" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedicationSchedules">
+              <PropertyRef Name="ScheduleID" />
+            </Principal>
+            <Dependent Role="CheckIns">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Doctor_Pa__Docto__656C112C">
+          <End Role="Doctors" Type="Self.Doctor" Multiplicity="0..1" />
+          <End Role="Doctor_Patient" Type="Self.Doctor_Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctors">
+              <PropertyRef Name="DoctorID" />
+            </Principal>
+            <Dependent Role="Doctor_Patient">
+              <PropertyRef Name="DoctorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Doctor_Pa__UserI__66603565">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Doctor_Patient" Type="Self.Doctor_Patient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Doctor_Patient">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Goals__UserID__5DCAEF64">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Goals" Type="Self.Goal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Goals">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicatio__Medic__4AB81AF0">
+          <End Role="Medications" Type="Self.Medication" Multiplicity="0..1" />
+          <End Role="MedicationSchedules" Type="Self.MedicationSchedule" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medications">
+              <PropertyRef Name="MedicationID" />
+            </Principal>
+            <Dependent Role="MedicationSchedules">
+              <PropertyRef Name="MedicationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Medicatio__UserI__3D5E1FD2">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Medications" Type="Self.Medication" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Medications">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reminders__Sched__5441852A">
+          <End Role="MedicationSchedules" Type="Self.MedicationSchedule" Multiplicity="0..1" />
+          <End Role="Reminders" Type="Self.Reminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MedicationSchedules">
+              <PropertyRef Name="ScheduleID" />
+            </Principal>
+            <Dependent Role="Reminders">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Notificat__UserI__59063A47">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Notifications" Type="Self.Notification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Notifications">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Reminders__UserI__534D60F1">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Reminders" Type="Self.Reminder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Reminders">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MdtEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CheckIns" EntityType="Self.CheckIn" />
+          <EntitySet Name="Doctor_Patient" EntityType="Self.Doctor_Patient" />
+          <EntitySet Name="Doctors" EntityType="Self.Doctor" />
+          <EntitySet Name="Goals" EntityType="Self.Goal" />
+          <EntitySet Name="Medications" EntityType="Self.Medication" />
+          <EntitySet Name="MedicationSchedules" EntityType="Self.MedicationSchedule" />
+          <EntitySet Name="Notifications" EntityType="Self.Notification" />
+          <EntitySet Name="Reminders" EntityType="Self.Reminder" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__CheckIns__Schedu__4F7CD00D" Association="Self.FK__CheckIns__Schedu__4F7CD00D">
+            <End Role="MedicationSchedules" EntitySet="MedicationSchedules" />
+            <End Role="CheckIns" EntitySet="CheckIns" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Doctor_Pa__Docto__656C112C" Association="Self.FK__Doctor_Pa__Docto__656C112C">
+            <End Role="Doctors" EntitySet="Doctors" />
+            <End Role="Doctor_Patient" EntitySet="Doctor_Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Doctor_Pa__UserI__66603565" Association="Self.FK__Doctor_Pa__UserI__66603565">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Doctor_Patient" EntitySet="Doctor_Patient" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Goals__UserID__5DCAEF64" Association="Self.FK__Goals__UserID__5DCAEF64">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Goals" EntitySet="Goals" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicatio__Medic__4AB81AF0" Association="Self.FK__Medicatio__Medic__4AB81AF0">
+            <End Role="Medications" EntitySet="Medications" />
+            <End Role="MedicationSchedules" EntitySet="MedicationSchedules" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Medicatio__UserI__3D5E1FD2" Association="Self.FK__Medicatio__UserI__3D5E1FD2">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Medications" EntitySet="Medications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reminders__Sched__5441852A" Association="Self.FK__Reminders__Sched__5441852A">
+            <End Role="MedicationSchedules" EntitySet="MedicationSchedules" />
+            <End Role="Reminders" EntitySet="Reminders" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Notificat__UserI__59063A47" Association="Self.FK__Notificat__UserI__59063A47">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Notifications" EntitySet="Notifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Reminders__UserI__534D60F1" Association="Self.FK__Reminders__UserI__534D60F1">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Reminders" EntitySet="Reminders" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MdtModelStoreContainer" CdmEntityContainer="MdtEntities2">
+          <EntitySetMapping Name="CheckIns">
+            <EntityTypeMapping TypeName="MdtModel.CheckIn">
+              <MappingFragment StoreEntitySet="CheckIns">
+                <ScalarProperty Name="CheckInID" ColumnName="CheckInID" />
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+                <ScalarProperty Name="AdherenceStatus" ColumnName="AdherenceStatus" />
+                <ScalarProperty Name="SideEffects" ColumnName="SideEffects" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctor_Patient">
+            <EntityTypeMapping TypeName="MdtModel.Doctor_Patient">
+              <MappingFragment StoreEntitySet="Doctor_Patient">
+                <ScalarProperty Name="DoctorPatientID" ColumnName="DoctorPatientID" />
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="AssignedAt" ColumnName="AssignedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctors">
+            <EntityTypeMapping TypeName="MdtModel.Doctor">
+              <MappingFragment StoreEntitySet="Doctors">
+                <ScalarProperty Name="DoctorID" ColumnName="DoctorID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Specialization" ColumnName="Specialization" />
+                <ScalarProperty Name="ContactInfo" ColumnName="ContactInfo" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Goals">
+            <EntityTypeMapping TypeName="MdtModel.Goal">
+              <MappingFragment StoreEntitySet="Goals">
+                <ScalarProperty Name="GoalID" ColumnName="GoalID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="GoalType" ColumnName="GoalType" />
+                <ScalarProperty Name="TargetValue" ColumnName="TargetValue" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medications">
+            <EntityTypeMapping TypeName="MdtModel.Medication">
+              <MappingFragment StoreEntitySet="Medications">
+                <ScalarProperty Name="MedicationID" ColumnName="MedicationID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="MedicationName" ColumnName="MedicationName" />
+                <ScalarProperty Name="Dosage" ColumnName="Dosage" />
+                <ScalarProperty Name="Frequency" ColumnName="Frequency" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MedicationSchedules">
+            <EntityTypeMapping TypeName="MdtModel.MedicationSchedule">
+              <MappingFragment StoreEntitySet="MedicationSchedules">
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="MedicationID" ColumnName="MedicationID" />
+                <ScalarProperty Name="ScheduledTime" ColumnName="ScheduledTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notifications">
+            <EntityTypeMapping TypeName="MdtModel.Notification">
+              <MappingFragment StoreEntitySet="Notifications">
+                <ScalarProperty Name="NotificationID" ColumnName="NotificationID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="NotificationType" ColumnName="NotificationType" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="SentAt" ColumnName="SentAt" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reminders">
+            <EntityTypeMapping TypeName="MdtModel.Reminder">
+              <MappingFragment StoreEntitySet="Reminders">
+                <ScalarProperty Name="ReminderID" ColumnName="ReminderID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="ReminderTime" ColumnName="ReminderTime" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MdtModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="MedicalHistory" ColumnName="MedicalHistory" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="UpdatedAt" ColumnName="UpdatedAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

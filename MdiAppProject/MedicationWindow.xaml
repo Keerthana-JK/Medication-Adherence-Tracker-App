@@ -5,12 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MdiAppProject"
         mc:Ignorable="d"
-        Title="MedicationWindow" Height="450" Width="800">
+        Title="Medication Window" Height="450" Width="800">
 	<Canvas>
-		<Button Content="Add" Canvas.Left="118" Canvas.Top="34" Height="28" Width="102" FontSize="18" FontFamily="Verdana" HorizontalAlignment="Left" VerticalAlignment="Center"></Button>
-		<Button Content="View Adherence Tracker" Canvas.Left="500" Canvas.Top="25" Height="39" Width="241" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Verdana" FontSize="18"></Button>
+		<Button x:Name="btnAddMedication" Content="Add" Canvas.Left="118" Canvas.Top="34" Height="28" Width="102" FontSize="18" FontFamily="Verdana" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+		<Button x:Name="btnViewAdherenceTracker" Content="View Adherence Tracker" Canvas.Left="500" Canvas.Top="25" Height="39" Width="241" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Verdana" FontSize="18"/>
 		<Button Content="Edit" Canvas.Left="123" Canvas.Top="363" Height="31" Width="118" FontFamily="Verdana" FontSize="18"/>
-		<Button Content="View Schedule" Canvas.Left="560" Canvas.Top="371" Height="35" Width="170" FontFamily="Verdana" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-		<DataGrid x:Name="grdMedications" Height="215" Canvas.Left="63" Canvas.Top="99" Width="662" ItemsSource="{Binding Medication}"/>
+		<Button x:Name="btnViewSchedule" Content="View Schedule" Canvas.Left="560" Canvas.Top="371" Height="35" Width="170" FontFamily="Verdana" FontSize="18" HorizontalAlignment="Left" VerticalAlignment="Center" />
+		<DataGrid x:Name="grdMedications" Height="215" Canvas.Left="63" Canvas.Top="99" Width="662" IsReadOnly="True" AreRowDetailsFrozen="True" AutoGenerateColumns="False" SelectionMode="Single" ItemsSource="{Binding Medications}">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Medication Id" Binding="{Binding MedicationID}"></DataGridTextColumn>
+				<DataGridTextColumn Header="User Id" Binding="{Binding UserID}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Medication Name" Binding="{Binding MedicationName}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Dosage" Binding="{Binding Dosage}"></DataGridTextColumn>
+				<DataGridTextColumn Header="Frequency" Binding="{Binding Frequency}"></DataGridTextColumn>
+				<DataGridTextColumn Header="StartDate" Binding="{Binding StartDate}"></DataGridTextColumn>
+				<DataGridTextColumn Header="EndDate" Binding="{Binding EndDate}"></DataGridTextColumn>
+				<DataGridTextColumn Header="CreatedAt" Binding="{Binding CreatedAt}"></DataGridTextColumn>
+				<DataGridTextColumn Header="UpdatedAt" Binding="{Binding UpdatedAt}"></DataGridTextColumn>
+			</DataGrid.Columns>
+		</DataGrid>
 	</Canvas>
 </Window>

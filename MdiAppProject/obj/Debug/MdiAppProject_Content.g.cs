@@ -8,8 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mdtentitydatamodel.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mdtentitydatamodel.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mdtappentitydatamodel.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("mdtappentitydatamodel.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sqlservertypes/readme.htm")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sqlservertypes/x64/msvcr120.dll")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sqlservertypes/x64/sqlserverspatial140.dll")]

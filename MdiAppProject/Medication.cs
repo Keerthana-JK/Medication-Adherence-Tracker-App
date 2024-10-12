@@ -14,6 +14,12 @@ namespace MdiAppProject
     
     public partial class Medication
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Medication()
+        {
+            this.MedicationSchedules = new HashSet<MedicationSchedule>();
+        }
+    
         public int MedicationID { get; set; }
         public Nullable<int> UserID { get; set; }
         public string MedicationName { get; set; }
@@ -23,5 +29,9 @@ namespace MdiAppProject
         public Nullable<System.DateTime> EndDate { get; set; }
         public Nullable<System.DateTime> CreatedAt { get; set; }
         public Nullable<System.DateTime> UpdatedAt { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MedicationSchedule> MedicationSchedules { get; set; }
+        public virtual User User { get; set; }
     }
 }
