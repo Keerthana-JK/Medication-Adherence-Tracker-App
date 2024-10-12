@@ -15,13 +15,14 @@ namespace MdiAppProject
     public partial class Reminder : Notification
     {
         public int ReminderID { get; set; }
-        //public Nullable<int> UserID { get; set; }
-        public Nullable<int> ScheduleID { get; set; }
+        //public int UserID { get; set; }
+        public int ScheduleID { get; set; }
         public System.DateTime ReminderTime { get; set; }
         //public string Message { get; set; }
         //public string Status { get; set; }
-        public Nullable<System.DateTime> CreatedAt { get; set; }
+        public System.DateTime CreatedAt { get; set; }
     
+        //Navigation properties
         public virtual MedicationSchedule MedicationSchedule { get; set; }
         //public virtual User User { get; set; }
     }

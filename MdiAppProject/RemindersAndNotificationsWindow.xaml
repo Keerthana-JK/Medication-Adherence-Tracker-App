@@ -6,48 +6,43 @@
         xmlns:local="clr-namespace:MdiAppProject"
         mc:Ignorable="d"
         Title="RemindersAndNotificationsWindow" Height="684" Width="800">
-    <Grid Margin="10">
-     <Grid.RowDefinitions>
-         <RowDefinition Height="3*" />
-         <RowDefinition Height="*" />
-     </Grid.RowDefinitions>
+	<Canvas Height="650" Width="800">
+		<StackPanel Width="800" Height="650">
+			<!--List of Reminders-->
+			<TextBlock Text="Reminders" FontSize="20" FontFamily="Verdana" FontWeight="Bold"/>
+			<ListBox x:Name="lstBoxReminder" Height="109" Width="699">
+				<StackPanel Height="99" Width="689">
+					<TextBlock Text="{Binding NotificationType}" FontWeight="Bold"/>
+					<TextBlock Text="{Binding Message}" />
+					<TextBlock Text="{Binding ReminderTime}" />
+				</StackPanel>
+			</ListBox>
 
-     <!-- Reminders List -->
-     <GroupBox Header="Reminders" FontWeight="Bold" Margin="5" Grid.Row="0">
-         <ListBox x:Name="RemindersListBox">
-             <ListBox.ItemTemplate>
-                 <DataTemplate>
-                     <StackPanel>
-                         <TextBlock Text="{Binding Title}" FontWeight="Bold"/>
-                         <TextBlock Text="{Binding Message}" />
-                         <TextBlock Text="{Binding Date, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" FontStyle="Italic" Foreground="Gray"/>
-                     </StackPanel>
-                 </DataTemplate>
-             </ListBox.ItemTemplate>
-         </ListBox>
-     </GroupBox>
+			<!--List of Notifications-->
+			<TextBlock Text="Notifications" FontSize="20" FontFamily="Verdana" FontWeight="Bold"/>
+			<ListBox Height="150" Width="707">
+				<StackPanel Height="116" Width="691">
+					<TextBlock Text="{Binding NotificationType}" FontWeight="Bold"/>
+					<TextBlock Text="{Binding Message}" />
+					<TextBlock Text="{Binding SentAt}" />
+				</StackPanel>
+			</ListBox>
 
-     <!-- Reminder Settings -->
-     <GroupBox Header="Reminder Settings" FontWeight="Bold" Margin="5" Grid.Row="1">
-         <StackPanel Margin="5">
-             <StackPanel Orientation="Horizontal">
-                 <TextBlock Text="Frequency:" Width="100" VerticalAlignment="Center"/>
-                 <ComboBox x:Name="FrequencyComboBox" Width="150">
-                     <ComboBoxItem Content="Daily" />
-                     <ComboBoxItem Content="Weekly" />
-                     <ComboBoxItem Content="Monthly" />
-                 </ComboBox>
-             </StackPanel>
-
-             <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                 <TextBlock Text="Preferred Time:" Width="100" VerticalAlignment="Center"/>
-                 <TextBox x:Name="PreferredTimeTextBox" Width="150" />
-             </StackPanel>
-
-				<Button Content="Save Settings" Width="100" Margin="0,10,0,0" HorizontalAlignment="Left" Background="CadetBlue" Foreground="white" Height="26" />
-
+			<!--Settings Section-->
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Frequency:" FontSize="20" FontFamily="Verdana" FontWeight="Bold"/>
+				<ComboBox x:Name="comboBoxFrequency" SelectedItem="{Binding SelectedFrequency}" Width="100">
+					<ComboBoxItem Content="Daily"/>
+					<ComboBoxItem Content="Weekly"/>
+					<ComboBoxItem Content="Monthly"/>
+				</ComboBox>
 			</StackPanel>
-     </GroupBox>
- </Grid>
 
+			<StackPanel Orientation="Horizontal" Margin="10">
+				<TextBlock Text="Preferred Time:" />
+				<TextBox Text="{Binding PreferredTime}" Width="100" />
+			</StackPanel>
+			<Button Content="Save Settings" Command="{Binding SaveSettingsCommand}" Width="100" Margin="10" />
+		</StackPanel>
+	</Canvas>
 </Window>

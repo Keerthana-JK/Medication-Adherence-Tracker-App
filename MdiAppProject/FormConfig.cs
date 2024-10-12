@@ -3,11 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MdiAppProject.ViewModels;
 
 namespace MdiAppProject
 {
 	public class FormConfig
 	{
+		//ViewModels
+		public static AddMedicationViewModel addMedicationViewModel = null;
+		public static AdherenceTrackingViewModel adherenceTrackingViewModel = null;
+		public static CheckInViewModel checkInViewModel = null;
+		public static DashboardViewModel dashboardViewModel = null;
+		public static DoctorViewModel doctorViewModel = null;
+		public static MedicationScheduleViewModel medicationScheduleViewModel = null;
+		public static PatientProfileViewModel patientProfileViewModel = null;
+		public static RemindersAndNotificationsViewModel remindersAndNotificationsViewModel = null;
+		public static ReportsViewModel reportsViewModel = null;
+		public static SettingsViewModel settingsViewModel = null;
+		//Windows
 		public static SignUpWindow signUpWindow = null;
 		public static LoginWindow loginWindow = null;
 		public static DashboardWindow dashboardWindow = null;
@@ -22,8 +35,20 @@ namespace MdiAppProject
 		public static SettingsWindow settingsWindow = null;
 		public static MedicationWindow medicationWindow = null;
 
+
 		static FormConfig()
 		{
+			addMedicationViewModel = new AddMedicationViewModel();
+			adherenceTrackingViewModel = new AdherenceTrackingViewModel();
+			checkInViewModel = new CheckInViewModel();
+			dashboardViewModel = new DashboardViewModel();
+			doctorViewModel = new DoctorViewModel();
+			medicationScheduleViewModel = new MedicationScheduleViewModel();
+			patientProfileViewModel = new PatientProfileViewModel();
+			remindersAndNotificationsViewModel = new RemindersAndNotificationsViewModel();
+			reportsViewModel = new ReportsViewModel();
+			settingsViewModel = new SettingsViewModel();
+
 			signUpWindow = new SignUpWindow();
 			loginWindow = new LoginWindow();
 			dashboardWindow = new DashboardWindow();

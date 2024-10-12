@@ -191,6 +191,16 @@
     <Compile Include="User.cs">
       <DependentUpon>MdtAppEntityDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\AddMedicationViewModel.cs" />
+    <Compile Include="ViewModels\AdherenceTrackingViewModel.cs" />
+    <Compile Include="ViewModels\CheckInViewModel.cs" />
+    <Compile Include="ViewModels\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\DoctorViewModel.cs" />
+    <Compile Include="ViewModels\MedicationScheduleViewModel.cs" />
+    <Compile Include="ViewModels\PatientProfileViewModel.cs" />
+    <Compile Include="ViewModels\RemindersAndNotificationsViewModel.cs" />
+    <Compile Include="ViewModels\ReportsViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Page Include="AddMedicationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

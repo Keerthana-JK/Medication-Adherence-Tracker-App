@@ -15,12 +15,13 @@ namespace MdiAppProject
     public partial class Notification
     {
         public int NotificationID { get; set; }
-        public Nullable<int> UserID { get; set; }
+        public int UserID { get; set; }
         public string NotificationType { get; set; }
         public string Message { get; set; }
-        public Nullable<System.DateTime> SentAt { get; set; }
-        public string Status { get; set; }
+        public System.DateTime SentAt { get; set; }
+        public string Status { get; set; } = "Unread";
     
+        //Navigation property
         public virtual User User { get; set; }
     }
 }
